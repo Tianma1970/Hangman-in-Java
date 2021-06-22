@@ -75,12 +75,12 @@ public class Main {
 			}
 			
 			if(lives <= 0 ) {
-				System.out.println("You are dead! Study your english");
+				System.out.println("You are dead! Study your English");
 				finished = true;
 			}
 		}
 		
-		System.out.println(hidden_text);
+		System.out.println("The word was " + hidden_text);
 		
 	}
 		
