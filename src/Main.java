@@ -18,7 +18,9 @@ public class Main {
 			words.add(textScanner.nextLine());
 		}
 		
+		//the system generates a random word which is hidden
 		String hidden_text = words.get((int)(Math.random() * words.size()));
+		// the random word has to be transformed to an array of characters
 		char[] textArray = hidden_text.toCharArray();
 		
 		char[] myAnswers = new char[textArray.length];
@@ -48,7 +50,7 @@ public class Main {
 					found = true;
 				}
 			}
-			
+			//if the input letter doesn't match the number of lives decreases
 			if(!found) {
 				lives--;
 				
@@ -58,10 +60,10 @@ public class Main {
 			boolean done = true;
 			for(int i = 0; i < myAnswers.length; i++) {
 				if(myAnswers[i] == '?') {
-					System.out.print(" _");
+					System.out.print(" _");//if the letter is not in the word
 					done = false;
 				}else {
-					System.out.print(" " + myAnswers[i]);
+					System.out.print(" " + myAnswers[i]);//if the letter is in the word
 				}
 			}
 			
@@ -75,11 +77,11 @@ public class Main {
 			}
 			
 			if(lives <= 0 ) {
-				System.out.println("You are dead! Study your English");
+				System.out.println("You are dead!  Please study your English");
 				finished = true;
 			}
 		}
-		
+		//display the hidden word when the game ends
 		System.out.println("The word was " + hidden_text);
 		
 	}
